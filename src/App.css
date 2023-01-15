@@ -67,6 +67,14 @@ h1{
   overflow: hidden;
 }
 
+.content.show{
+  height: fit-content;
+}
+
+.content.show .questions{ 
+  font-weight: 700;
+}
+
 .questions{
   padding: 20px 0;
   
@@ -75,7 +83,7 @@ h1{
   justify-content: space-between;
   
   color: hsl(237, 12%, 33%);
-  font-size: 16px;
+  font-size: 15px;
 
   cursor: pointer;
 }
@@ -84,9 +92,19 @@ h1{
   color: var(--soft-red);
 }
 
-.answers{
+.deg.off{ 
+  transition: .25s;
+}
 
-  font-size: 12px;
+.deg.on{ 
+  transition: .25s;
+  rotate: 180deg;
+}
+
+.answers{
+  overflow: hidden;
+
+  font-size: 13px;
   font-family: 'Noto Sans', sans-serif;
   color:  hsl(240, 6%, 50%);
   
@@ -126,4 +144,12 @@ h1{
   bottom: 126px;
   
   z-index: 999999;
+}
+
+@media screen and (max-width:375px){
+  main{
+    flex-direction: column ;
+    width: 328px;
+    height: 535px;
+  }
 }
