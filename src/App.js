@@ -17,7 +17,7 @@ export const App = () => {
 
       <div className='rigth'>
         <h1>FAQ</h1>
-        <Questions q={'How many team members can i invite?'}/>
+        <Questions q={'How many team members can i invite?'} p={'aaaaaaaaaaaaaaaaaaaaaaaa'}/>
         <Questions q={'What is the maximum file upload size?'}/>
         <Questions q={'How do i reset my password?'}/>
         <Questions q={'Can I cancel my subscription?'}/>

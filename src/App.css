@@ -60,6 +60,13 @@ h1{
   padding-bottom: 30px;
 }
 
+.content{
+  border-bottom: 2px solid hsl(240, 5%, 91%);
+  height: 60px;
+
+  overflow: hidden;
+}
+
 .questions{
   padding: 20px 0;
   
@@ -67,9 +74,7 @@ h1{
   align-items: center;
   justify-content: space-between;
   
-  border-bottom: 2px solid hsl(240, 5%, 91%);
-  
-  color: hsl(238, 29%, 16%);
+  color: hsl(237, 12%, 33%);
   font-size: 16px;
 
   cursor: pointer;
@@ -77,6 +82,16 @@ h1{
 
 .questions:is(:hover, :focus){
   color: var(--soft-red);
+}
+
+.answers{
+
+  font-size: 12px;
+  font-family: 'Noto Sans', sans-serif;
+  color:  hsl(240, 6%, 50%);
+  
+
+  padding: 0 0 20px 0;
 }
 
 .wrapper{
