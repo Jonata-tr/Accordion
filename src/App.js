@@ -55,7 +55,7 @@ export const App = () => {
          <Pictures  
             desktop={imgs[1]} 
             mobile={imgs[2]} 
-            img={imgs[1]} id={'bg'}
+            img={imgs[2]} id={'bg'}
          />
         </div>
         
