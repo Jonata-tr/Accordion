@@ -1,8 +1,7 @@
 import './App.css'
-import { Questions } from './components/questions'
 import { imgs } from './images/images'
+import { Pictures } from './components/picture'
 import { useState } from 'react'
-import woman from './images/illustration-woman-online-desktop.svg'
 
 
 const lista = [
@@ -45,27 +44,36 @@ export const App = () => {
     <main>
       <div className='left'>
         <div className='wrapper'>
-          
-          <picture>
-            <source media='(max-width:425px)' srcSet={imgs[5]} />
-            <img src={woman} alt='' id='woman'/>
-          </picture>
 
-          {/* Refazer as img pra adicionar as pictures */}
+          {/* Woman and background  */}
+          <Pictures 
+            desktop={imgs[4]} 
+            mobile={imgs[5]}
+            img={imgs[5]} id={'woman'}
+          />         
 
-          <img src={imgs[1]} id='bg' alt='background of the image'/>
+         <Pictures  
+            desktop={imgs[1]} 
+            mobile={imgs[2]} 
+            img={imgs[1]} id={'bg'}
+         />
         </div>
-        <img src={imgs[0]} id='box' alt='image of a orange cube'/>
+        
+        {/* Box  */}
+         <Pictures  
+            desktop={imgs[0]}
+            img={imgs[0]} id={'box'}  
+         />
       </div>
 
       <div className='rigth'>
         <h1>FAQ</h1>
 
         {lista.map((item, i) => (
-          <div className={click != i ? 'content' : 'content show'} onClick={() => Teste(i)} key={i}>
+          <div className={click !== i ? 'content' : 'content show'} onClick={() => Teste(i)} key={i}>
             <div className='questions'>
               {item.question}
-              <img src={imgs[3]} alt='arrow' className={click == i ? 'deg on': 'deg off'} />
+              <img src={imgs[3]} alt='arrow' className={click === i ? 'deg on': 'deg off'} />
             </div>
             <div className='answers'>
               {item.answer}
