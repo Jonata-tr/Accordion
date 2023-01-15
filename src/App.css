@@ -21,14 +21,14 @@ font-family: 'Ubuntu', sans-serif; */
 body{
   height: 100vh;
   display: grid;
-  justify-content: center;
+  place-content: center;
   align-items: center;
+
   background-image: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
 }
 
 main{
   display: flex;
-  flex-direction: row;
   
   width: 955px;
   height: 530px;
@@ -102,14 +102,11 @@ h1{
 }
 
 .answers{
-  overflow: hidden;
-
   font-size: 13px;
   font-family: 'Noto Sans', sans-serif;
   color:  hsl(240, 6%, 50%);
   
-
-  padding: 0 0 20px 0;
+ padding: 0 0 20px 0;
 }
 
 .wrapper{
@@ -146,10 +143,72 @@ h1{
   z-index: 999999;
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width:425px){
   main{
-    flex-direction: column ;
+    position: relative;
+    display: block;
     width: 328px;
     height: 535px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left,
+  .wrapper{
+    position: absolute;
+    width: 236px;
+    height: 180px;
+    display: none;
+  }
+  
+  #woman{
+    width: 236px;
+    height: 500px;
+    position: absolute;
+  }
+  
+  .bg{
+    position: absolute;
+    width: 235px;
+    height: 145px;
+  }
+  
+  #box{
+    display: none;
+  }
+  
+  .rigth{
+    align-items: center;
+
+    position: absolute;
+    bottom: 85px;
+
+    width: 320px;
+    height: 308px;
+    
+    padding: 0 22px;
+  }
+  
+  .rigth h1{
+    text-align: center;
+  }
+
+  .content{
+    height: 50px;
+  }
+
+  .questions:hover,
+  .questions:focus{
+    color: hsl(238, 29%, 16%);
+  }
+
+  .answers{
+    font-size: 13px;
+  }
+
+  .questions{
+    font-size: 14px;
+    padding: 15px 0;
   }
 }
