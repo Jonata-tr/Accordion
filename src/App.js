@@ -49,20 +49,20 @@ export const App = () => {
           <Pictures 
             desktop={imgs[4]} 
             mobile={imgs[5]}
-            img={imgs[5]} id={'woman'}
+            img={imgs[5]} id={'woman'} alt={"Woman using a screen"}
           />         
 
          <Pictures  
             desktop={imgs[1]} 
             mobile={imgs[2]} 
-            img={imgs[2]} id={'bg'}
+            img={imgs[2]} id={'bg'} alt={"shadow of the picture"}
          />
         </div>
         
         {/* Box  */}
          <Pictures  
             desktop={imgs[0]}
-            img={imgs[0]} id={'box'}  
+            img={imgs[0]} id={'box'} alt={"One box"} 
          />
       </div>
 
