@@ -62,6 +62,7 @@ export const App = () => {
         {/* Box  */}
          <Pictures  
             desktop={imgs[0]}
+            mobile={imgs[0]}
             img={imgs[0]} id={'box'} alt={"One box"} 
          />
       </div>
